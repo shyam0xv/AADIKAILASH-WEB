@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aadikailash Yatra</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+  <style>
+    /* Custom animations */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    .glassmorphism {
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white text-gray-900 font-sans antialiased">
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">Aadi Kailash</div>
+    
+    <ul class="nav-links">
+  <li><a href="#hero">Home</a></li>
+<li><a href="#popular">Destinations</a></li>
+  <li><a href="#homestay">Homestay</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+
+  </div>
+</nav>
+
+<style>
+  /* Reset */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  
+  .navbar {
+    position: fixed;
+    width: 100%;
+    top: 0; left: 0;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 999;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 2px;
+    cursor: pointer;
+    user-select: none;
+    text-shadow: 0 0 8px #8e2de2;
+    transition: color 0.3s ease;
+  }
+  .logo:hover {
+    color: #b740ff;
+    text-shadow: 0 0 15px #b740ff;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+  }
+  .nav-links li a {
+    color: #ddd;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.3s ease;
+  }
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #b740ff;
+    transition: width 0.4s ease;
+  }
+  .nav-links li a:hover {
+    color: #b740ff;
+  }
+  .nav-links li a:hover::after {
+    width: 100%;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      gap: 1.5rem;
+    }
+    .logo {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+
+  <!-- Hero Section -->
+<section id="hero" class="relative h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('picsaadi/IMG-20250524-WA0006.jpg');">
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  <div class="relative max-w-4xl text-center px-6">
+    <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 drop-shadow-lg animate-pulse tracking-wide leading-tight">
+      Aadi Kailash Yatra
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-10 animate-fade-in-up">
+      Discover the untouched beauty of Himalayas — Om Parvat, Adi Kailash, and sacred valleys with Shivay Homestay.
+    </p>
+    <a href="#popular" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg transition transform hover:scale-105 animate-fade-in-up">
+      Explore Destinations
+    </a>
+  </div>
+</section>
+
+<!-- Popular Destinations -->
+<section id="popular" class="py-16 px-6 bg-white">
+  <h2 class="text-4xl font-extrabold text-center text-blue-800 mb-12 tracking-wide">Popular Destinations</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+    <!-- Card Template -->
+    <div class="bg-white rounded-3xl shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer group">
+      <div class="relative overflow-hidden rounded-t-3xl">
+        <img src="picsaadi/om.jpg" alt="Om Parvat" class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+        <h3 class="absolute bottom-4 left-6 text-white text-2xl font-bold drop-shadow-lg">Om Parvat</h3>
+      </div>
+      <div class="p-6 text-gray-700 text-lg leading-relaxed">
+        A sacred peak where snow forms the shape of 'Om'. A must-visit for spiritual seekers.
+      </div>
+    </div>
+
+    <div class="bg-white rounded-3xl shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer group">
+      <div class="relative overflow-hidden rounded-t-3xl">
+        <img src="picsaadi/aadikailash.jpg" alt="Adi Kailash" class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+        <h3 class="absolute bottom-4 left-6 text-white text-2xl font-bold drop-shadow-lg">Adi Kailash</h3>
+      </div>
+      <div class="p-6 text-gray-700 text-lg leading-relaxed">
+        Known as 'Chhota Kailash', it mirrors Mount Kailash and offers a deeply spiritual atmosphere.
+      </div>
+    </div>
+
+    <div class="bg-white rounded-3xl shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer group">
+      <div class="relative overflow-hidden rounded-t-3xl">
+        <img src="picsaadi/kuti.jpg" alt="Kuti Village" class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+        <h3 class="absolute bottom-4 left-6 text-white text-2xl font-bold drop-shadow-lg">Kuti Village</h3>
+      </div>
+      <div class="p-6 text-gray-700 text-lg leading-relaxed">
+        A peaceful Himalayan village offering unmatched views and a calm retreat on the yatra path.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Homestay Section -->
+<section class="py-20 bg-gradient-to-b from-white to-blue-50" id="homestay">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Title -->
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-center text-indigo-900 mb-12 tracking-tight">
+      Shivay Homestay
+    </h2>
+
+    <!-- Hero Image -->
+    <div class="flex justify-center mb-10">
+      <img src="picsaadi/Room1.jpg" 
+           alt="Main Room" 
+           class="rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-500 max-w-full md:max-w-4xl">
+    </div>
+
+    <!-- Description -->
+    <p class="text-center text-gray-700 text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed mb-6">
+      Nestled in the peaceful lap of the Himalayas, <strong>Shivay Homestay</strong> offers a serene and spiritual escape.
+      Whether you're on a soul-searching journey or simply looking to unwind in nature, our cozy rooms provide the perfect stay.
+    </p>
+
+    <!-- Pricing -->
+    <div class="text-center text-xl sm:text-2xl font-semibold text-indigo-800 mb-8">
+      Single Bed – ₹1500/- &nbsp; | &nbsp; Double Bed – ₹3000/- Per Room
+    </div>
+
+    <!-- WhatsApp CTA -->
+    <div class="text-center mb-14">
+      <a href="https://wa.me/919236501728?text=I'm%20interested%20in%20booking%20a%20room%20at%20Shivay%20Homestay" 
+         target="_blank" 
+         class="inline-block bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-full text-lg sm:text-xl font-semibold shadow-xl transition duration-300">
+        📞 Book Now on WhatsApp
+      </a>
+    </div>
+
+    <!-- Room Gallery Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition">
+        <img src="picsaadi/Room7.jpg" alt="Room 1" class="w-full h-64 object-cover">
+        <p class="text-center py-3 font-medium text-gray-700">Spacious Room</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition">
+        <img src="picsaadi/room2.jpg" alt="Room 2" class="w-full h-64 object-cover">
+        <p class="text-center py-3 font-medium text-gray-700">Comfort with View</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition">
+        <img src="picsaadi/room3.jpg" alt="Room 3" class="w-full h-64 object-cover">
+        <p class="text-center py-3 font-medium text-gray-700">Modern Setup</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition">
+        <img src="picsaadi/room4.jpg" alt="Room 4" class="w-full h-64 object-cover">
+        <p class="text-center py-3 font-medium text-gray-700">Cozy & Clean</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition">
+        <img src="picsaadi/room5.jpg" alt="Room 5" class="w-full h-64 object-cover">
+        <p class="text-center py-3 font-medium text-gray-700">Wooden Touch</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition">
+        <img src="picsaadi/room6.jpg" alt="Room 6" class="w-full h-64 object-cover">
+        <p class="text-center py-3 font-medium text-gray-700">Night View</p>
+      </div>
+    </div>
+
+    <!-- Note -->
+    <p class="mt-12 text-center text-sm text-gray-500">Click images for full size view on mobile.</p>
+  </div>
+</section>
+
+
+
+
+
+<!-- Gallery Section -->
+<section class="py-20 px-6 bg-gray-50 max-w-7xl mx-auto rounded-3xl shadow-2xl border border-gray-300">
+  <h2 class="text-5xl font-extrabold text-center text-blue-800 mb-14 tracking-wide">Photo Gallery</h2>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+    <!-- Gallery Images with smooth zoom hover -->
+    <a href="picsaadi/IMG-20250524-WA0006.jpg" class="glightbox group" data-gallery="aadikailash" data-title="Beautiful view from the Yatra">
+      <img loading="lazy" src="picsaadi/IMG-20250524-WA0006.jpg" alt="Beautiful view from the Yatra" class="rounded-3xl shadow-lg object-cover h-52 w-full transition-transform duration-500 group-hover:scale-110 group-hover:shadow-2xl" />
+      <p class="text-center mt-3 text-gray-600 text-sm tracking-wide">Beautiful view from the Yatra</p>
+    </a>
+    <a href="picsaadi/IMG-20250524-WA0007.jpg" class="glightbox group" data-gallery="aadikailash" data-title="Himalayan Bliss">
+      <img loading="lazy" src="picsaadi/IMG-20250524-WA0007.jpg" alt="Himalayan Bliss" class="rounded-3xl shadow-lg object-cover h-52 w-full transition-transform duration-500 group-hover:scale-110 group-hover:shadow-2xl" />
+      <p class="text-center mt-3 text-gray-600 text-sm tracking-wide">Himalayan Bliss</p>
+    </a>
+    <a href="picsaadi/IMG-20250524-WA0009.jpg" class="glightbox group" data-gallery="aadikailash" data-title="Serene Mountains">
+      <img loading="lazy" src="picsaadi/IMG-20250524-WA0009.jpg" alt="Serene Mountains" class="rounded-3xl shadow-lg object-cover h-52 w-full transition-transform duration-500 group-hover:scale-110 group-hover:shadow-2xl" />
+      <p class="text-center mt-3 text-gray-600 text-sm tracking-wide">Serene Mountains</p>
+    </a>
+    <a href="picsaadi/IMG-20250524-WA0010.jpg" class="glightbox group" data-gallery="aadikailash" data-title="Sacred Journey">
+      <img loading="lazy" src="picsaadi/IMG-20250524-WA0010.jpg" alt="Sacred Journey" class="rounded-3xl shadow-lg object-cover h-52 w-full transition-transform duration-500 group-hover:scale-110 group-hover:shadow-2xl" />
+      <p class="text-center mt-3 text-gray-600 text-sm tracking-wide">Sacred Journey</p>
+    </a>
+    <a href="picsaadi/IMG-20250524-WA0019.jpg" class="glightbox group" data-gallery="aadikailash" data-title="Nature's Glory">
+      <img loading="lazy" src="picsaadi/IMG-20250524-WA0019.jpg" alt="Nature's Glory" class="rounded-3xl shadow-lg object-cover h-52 w-full transition-transform duration-500 group-hover:scale-110 group-hover:shadow-2xl" />
+      <p class="text-center mt-3 text-gray-600 text-sm tracking-wide">Nature's Glory</p>
+    </a>
+    <a href="picsaadi/IMG-20250524-WA0020.jpg" class="glightbox group" data-gallery="aadikailash" data-title="Mountain Path">
+      <img loading="lazy" src="picsaadi/IMG-20250524-WA0020.jpg" alt="Mountain Path" class="rounded-3xl shadow-lg object-cover h-52 w-full transition-transform duration-500 group-hover:scale-110 group-hover:shadow-2xl" />
+      <p class="text-center mt-3 text-gray-600 text-sm tracking-wide">Mountain Path</p>
+    </a>
+    <a href="picsaadi/IMG-20250524-WA0003.jpg" class="glightbox group" data-gallery="aadikailash" data-title="Sunset Peaks">
+      <img loading="lazy" src="picsaadi/IMG-20250524-WA0003.jpg" alt="Sunset Peaks" class="rounded-3xl shadow-lg object-cover h-52 w-full transition-transform duration-500 group-hover:scale-110 group-hover:shadow-2xl" />
+      <p class="text-center mt-3 text-gray-600 text-sm tracking-wide">Sunset Peaks</p>
+    </a>
+    <a href="picsaadi/IMG-20250524-WA0002.jpg" class="glightbox group" data-gallery="aadikailash" data-title="Valley View">
+      <img loading="lazy" src="picsaadi/IMG-20250524-WA0002.jpg" alt="Valley View" class="rounded-3xl shadow-lg object-cover h-52 w-full transition-transform duration-500 group-hover:scale-110 group-hover:shadow-2xl" />
+      <p class="text-center mt-3 text-gray-600 text-sm tracking-wide">Valley View</p>
+    </a>
+  </div>
+</section>
+
+<section class="py-12 bg-white" id="route-map">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">Aadi Kailash Yatra Route</h2>
+    <div class="text-left text-lg space-y-4 bg-gray-100 p-6 rounded-xl shadow-lg">
+      <ol class="list-decimal pl-6 space-y-2 text-gray-700">
+        <li><strong>Delhi to Kathgodam:</strong> Overnight train or bus (approx. 300 km)</li>
+        <li><strong>Kathgodam to Pithoragarh:</strong> Via Almora – Scenic drive (approx. 260 km)</li>
+        <li><strong>Pithoragarh to Dharchula:</strong> Border town near Nepal (approx. 100 km)</li>
+        <li><strong>Dharchula to Tawaghat:</strong> By road (approx. 19 km)</li>
+        <li><strong>Tawaghat to Gunji:</strong> Trek/Jeep (permit required, approx. 60 km)</li>
+        <li><strong>Gunji to Nabhidhang:</strong> Short drive (permit required, 20 km)</li>
+        <li><strong>Nabhidhang to Aadi Kailash Darshan:</strong> Trek or drive up to the viewpoint</li>
+      </ol>
+      <p class="mt-4 text-sm text-gray-500">Note: Proper permits and medical check-up are mandatory from Dharchula onward. ID proof is required.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="relative py-20 bg-gradient-to-br from-blue-100 via-white to-blue-200">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+
+    <!-- Glow Title -->
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-blue-900 mb-6 tracking-wider drop-shadow-lg animate-pulse">
+      Contact Us
+    </h2>
+
+    <p class="text-lg sm:text-xl text-gray-700 mb-12">
+      Reach out to us for bookings or inquiries via WhatsApp or Email.
+    </p>
+
+    <!-- Contact Buttons -->
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-8">
+
+      <!-- WhatsApp Button -->
+      <a href="https://wa.me/9236501728" target="_blank"
+         class="flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold shadow-xl transition duration-300 transform hover:scale-105 hover:shadow-2xl">
+        <i class="fab fa-whatsapp text-3xl animate-bounce"></i> 
+        <span class="text-lg sm:text-xl">WhatsApp Now</span>
+      </a>
+
+      <!-- Email Button -->
+      <a href="mailto:umesh.nagnyal@gmail.com"
+         class="flex items-center gap-3 bg-blue-700 hover:bg-blue-800 text-white px-8 py-4 rounded-full font-semibold shadow-xl transition duration-300 transform hover:scale-105 hover:shadow-2xl">
+        <i class="fas fa-envelope text-3xl"></i> 
+        <span class="text-lg sm:text-xl">umesh.nagnyal@gmail.com</span>
+      </a>
+
+    </div>
+
+    <!-- Facebook Link -->
+    <div class="mt-10">
+      <a href="https://www.facebook.com/YOUR_PAGE_USERNAME" target="_blank"
+         class="inline-flex items-center gap-2 text-blue-700 hover:text-blue-900 font-medium text-lg transition">
+        <i class="fab fa-facebook-square text-2xl"></i> Follow us on Facebook
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+<footer class="bg-blue-900 text-blue-200 text-center py-8 mt-20">
+  <p>© 2025 Aadikailash Yatra. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({ selector: '.glightbox' });
+</script>
+
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</body>
+</html> 
