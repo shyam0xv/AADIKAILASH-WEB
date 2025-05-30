@@ -32,19 +32,57 @@
   </style>
 </head>
 <body class="bg-gradient-to-b from-blue-50 to-white text-gray-900 font-sans antialiased">
-<nav class="navbar">
-  <div class="container">
-    <div class="logo">Aadi Kailash</div>
-    
-    <ul class="nav-links">
-  <li><a href="#hero">Home</a></li>
-<li><a href="#popular">Destinations</a></li>
-  <li><a href="#homestay">Homestay</a></li>
-  <li><a href="#contact">Contact</a></li>
-</ul>
+!-- Navbar -->
+<nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="#" class="text-xl font-bold text-blue-600">TrekVibe</a>
+      </div>
 
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#hero" class="text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
+        <a href="#popular" class="text-gray-700 hover:text-blue-600 font-medium transition">Destination</a>
+        <a href="#trek" class="text-gray-700 hover:text-blue-600 font-medium transition">Trek</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="menu" class="hidden md:hidden px-4 pb-4">
+    <a href="#hero" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Home</a>
+    <a href="#popular" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Destination</a>
+    <a href="#trek" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Trek</a>
+    <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Contact</a>
   </div>
 </nav>
+
+<!-- Script to toggle mobile menu -->
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+<!-- Spacer to avoid content behind navbar -->
+<div class="h-16"></div>
 
 <style>
   /* Reset */
